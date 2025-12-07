@@ -1,39 +1,44 @@
-﻿using Tyuiu.ReutovZA.Sprint3.Task0.V22.Lib;
-
+﻿using System;
+using Tyuiu.ReutovZA.Sprint3.Task0.V22.Lib;
 namespace Tyuiu.ReutovZA.Sprint3.Task0.V22
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            DataService ds = new DataService();
             Console.Title = "Спринт #3 | Выполнил: Реутов З.А| ПКТб-25-1";
+            
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #3                                                               *");
-            Console.WriteLine("* Тема: Оператор цикла for                                                *");
+            Console.WriteLine("* Оператор цикла for                                                      *");
             Console.WriteLine("* Задание #0                                                              *");
             Console.WriteLine("* Вариант #22                                                             *");
-            Console.WriteLine("* Выполнил: Выполнил: Реутов З.А| ПКТб-25-1                               *");
+            Console.WriteLine("* Выполнил: Реутов З.А| ПКТб-25-1                                         *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Написать программу используя цикл for, которая вычисляет произведение   *");
-            Console.WriteLine("* ряда по формуле, при a=0,25                                             *");
-            Console.WriteLine("*                                                                         *");
+
+            Console.WriteLine("*Написать программу используя цикл for, которая вычисляет произведение ряд*");
+            Console.WriteLine("*да по формуле, при a=0,25                                                *");
+
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
-            double value = 0.25;
-            int startValue = 1;
-            int stopValue = 8;
-            Console.WriteLine("Переменная a = " + value);
-            Console.WriteLine("Старт шага = " + startValue);
-            Console.WriteLine("Конец шага = " + stopValue);
+
+            Console.WriteLine("Переменная a = ");
+            double value = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Старт шага = ");
+            int startValue = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Конец шага = ");
+            int stopValue = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
-            var res = ds.GetMultiplySeries(value, startValue, stopValue);
-            Console.WriteLine("Произведение ряда = " + res);
+
+            DataService ds = new DataService();
+
+            var result = ds.GetMultiplySeries(value, startValue, stopValue);
+            Console.WriteLine("Сумма ряда = " + result);
             Console.ReadKey();
         }
     }
