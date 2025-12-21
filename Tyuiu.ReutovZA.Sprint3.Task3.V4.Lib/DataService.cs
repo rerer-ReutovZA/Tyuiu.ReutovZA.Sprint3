@@ -1,18 +1,19 @@
-﻿namespace Tyuiu.ReutovZA.Sprint3.Task4.V4.Lib;
+﻿﻿using tyuiu.cources.programming.interfaces.Sprint3;
 
-public class DataService
+namespace Tyuiu.ReutovZA.Sprint3.Task3.V4.Lib
 {
-    public string DeleteCharFromStr(string value)
+    public class DataService : ISprint3Task3V4
     {
-        string result = "";
-        // Используем цикл foreach для перебора каждого символа в строке
-        foreach (char c in value)
+        public string DeleteCharInString(string value, char item)
         {
-            if (c != 'j')
+            foreach (char chr in value)
             {
-                result += c;
+                if (chr == item)
+                {
+                    value = value.Replace(chr.ToString(), String.Empty);
+                }
             }
+            return value;
         }
-        return result;
     }
 }

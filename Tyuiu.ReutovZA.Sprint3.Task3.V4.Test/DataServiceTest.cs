@@ -1,18 +1,21 @@
-﻿using Tyuiu.ReutovZA.Sprint3.Task4.V4.Lib;
-
-namespace Tyuiu.ReutovZA.Sprint3.Task4.V4.Test;
-
-[TestClass]
-public class DataServiceTest
+﻿using Tyuiu.ReutovZA.Sprint3.Task3.V4.Lib;
+namespace Tyuiu.ReutovZA.Sprint3.Task3.V4.Test
 {
-    [TestMethod]
-    public void ValidDeleteCharFromStr()
+    [TestClass]
+    public sealed class DataServiceTest
     {
-        DataService ds = new DataService();
-        string str = "plkjjdw cvjkl";
-        string res = ds.DeleteCharFromStr(str);
+        [TestMethod]
+        public void TestMethod1()
+        {
+            DataService ds = new DataService();
 
-        // Ожидаемый результат: "plkdw cvkl" (все 'j' удалены)
-        Assert.AreEqual("plkdw cvkl", res);
+            string value = "joker has joken";
+            char item = 'j';
+
+            string res = ds.DeleteCharInString(value, item);
+            string wait = "oker has oken";
+
+            Assert.AreEqual(wait, res);
+        }
     }
 }
