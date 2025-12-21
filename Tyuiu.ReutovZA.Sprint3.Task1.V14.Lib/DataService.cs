@@ -1,6 +1,4 @@
-﻿
-using System.Security;
-using tyuiu.cources.programming.interfaces.Sprint3;
+﻿using tyuiu.cources.programming.interfaces.Sprint3;
 
 namespace Tyuiu.ReutovZA.Sprint3.Task1.V14.Lib
 {
@@ -9,13 +7,15 @@ namespace Tyuiu.ReutovZA.Sprint3.Task1.V14.Lib
         public double GetSumSeries(double value, int startValue, int stopValue)
         {
             double sum = 0;
-            int i = startValue;
-            while (i <= stopValue)
+            int k = startValue;
+            while (k <= stopValue)
             {
-                sum += (Math.Pow(value, i) + (1 / (i + 1.0))) * Math.Cos(value);
-                i++;
+                // Формула: (t^k + 1/(k+1)) * cos(t)
+                sum += (Math.Pow(value, k) + (1.0 / (k + 1.0))) * Math.Cos(value);
+                k++;
             }
             return Math.Round(sum, 3);
         }
     }
+}
 }

@@ -2,17 +2,19 @@
 
 namespace Tyuiu.ReutovZA.Sprint3.Task1.V14.Test;
 
-public class Tests
+[TestClass]
+public class DataServiceTest
 {
-    [SetUp]
-    public void Setup()
-    {
-    }
-
-    [Test]
-    public void Test1()
+    [TestMethod]
+    public void ValidGetSumSeries()
     {
         DataService ds = new DataService();
-        Assert.That(ds.GetSumSeries(0.7, 1, 14), Is.EqualTo(3.546));
+        double t = 0.7;
+        int start = 1;
+        int stop = 14;
+        double res = ds.GetSumSeries(t, start, stop);
+
+        // Ожидаемое значение для t=0.7 при k от 1 до 14
+        Assert.AreEqual(3.546, res);
     }
 }
