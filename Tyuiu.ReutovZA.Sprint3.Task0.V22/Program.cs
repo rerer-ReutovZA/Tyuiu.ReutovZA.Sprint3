@@ -14,7 +14,7 @@ namespace Tyuiu.ReutovZA.Sprint3.Task0.V22
             Console.WriteLine("* Тема: Оператор цикла for                                                *");
             Console.WriteLine("* Задание #0                                                              *");
             Console.WriteLine("* Вариант #22                                                             *");
-            Console.WriteLine("* Выполнил: Чигуров Максим Владиславович | ПКТб-24-1                      *");
+            Console.WriteLine("* Выполнил: Реутов З.А| ПКТб-25-1                                         *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
             Console.WriteLine("* Написать программу используя цикл for, которая вычисляет произведение   *");
