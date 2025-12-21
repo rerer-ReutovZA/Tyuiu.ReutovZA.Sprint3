@@ -6,14 +6,13 @@ namespace Tyuiu.ReutovZA.Sprint3.Task0.V22.Lib
     {
         public double GetMultiplySeries(double value, int startValue, int stopValue)
         {
-            double MultiplySeries = 1;
-            int k;
+            double res = 1;
 
-            for (k = startValue; k <= stopValue; k++)
+            for (int i = startValue; i <= stopValue; i++)
             {
-                MultiplySeries = MultiplySeries * ((Math.Pow(value, k) + 4) * Math.Cos(value));
+                res *= (Math.Pow(value, i) + 4) * Math.Cos(value);
             }
-            return Math.Round(MultiplySeries, 3);
+            return Math.Round(res, 3);
         }
     }
 }
